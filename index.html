@@ -1,0 +1,1001 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        <link rel="next" href="html-css/">
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.2.8">
+    
+    
+      
+        <title>Js Interview Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta  property="og:type"  content="website" >
+      
+        <meta  property="og:title"  content="JS & React" >
+      
+        <meta  property="og:description"  content="None" >
+      
+        <meta  property="og:image"  content="./assets/images/social/index.png" >
+      
+        <meta  property="og:image:type"  content="image/png" >
+      
+        <meta  property="og:image:width"  content="1200" >
+      
+        <meta  property="og:image:height"  content="630" >
+      
+        <meta  property="og:url"  content="None" >
+      
+        <meta  name="twitter:card"  content="summary_large_image" >
+      
+        <meta  name="twitter:title"  content="JS & React" >
+      
+        <meta  name="twitter:description"  content="None" >
+      
+        <meta  name="twitter:image"  content="./assets/images/social/index.png" >
+      
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#js-react" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Js Interview Notes" class="md-header__button md-logo" aria-label="Js Interview Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Js Interview Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              JS & React
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="lime"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="." class="md-tabs__link">
+        
+  
+    
+  
+  JS & React
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="html-css/" class="md-tabs__link">
+        
+  
+    
+  
+  Html css
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="node/" class="md-tabs__link">
+        
+  
+    
+  
+  Node
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="r-failed/" class="md-tabs__link">
+        
+  
+    
+  
+  R failed
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Js Interview Notes" class="md-nav__button md-logo" aria-label="Js Interview Notes" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    Js Interview Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    JS & React
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    JS & React
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#javascript" class="md-nav__link">
+    JavaScript
+  </a>
+  
+    <nav class="md-nav" aria-label="JavaScript">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-lexical-scoping" class="md-nav__link">
+    What is lexical scoping?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-primitive-data-type" class="md-nav__link">
+    What is the primitive data type?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-non-primitive-data-types" class="md-nav__link">
+    What are Non-primitive data types?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-hoisting" class="md-nav__link">
+    What is hoisting?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-difference-between-varlet-and-const" class="md-nav__link">
+    What is the difference between var,let and const?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-implicit-type-coercion" class="md-nav__link">
+    What is implicit type Coercion?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#is-js-a-statically-typed-or-a-dynamically-typed-language" class="md-nav__link">
+    Is JS a statically typed or a dynamically typed language?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-currying" class="md-nav__link">
+    What is currying?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-closures" class="md-nav__link">
+    What are Closures?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#where-we-need-to-use-closure-function" class="md-nav__link">
+    Where we need to use closure function?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-object-prototypes" class="md-nav__link">
+    What are object prototypes?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-recursion" class="md-nav__link">
+    What is recursion?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-the-rest-parameter-and-spread-operator" class="md-nav__link">
+    What is the rest parameter and spread operator?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-promises" class="md-nav__link">
+    What are promises?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-generator-functions" class="md-nav__link">
+    What are generator functions?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-object-destructuring" class="md-nav__link">
+    What is Object Destructuring?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-event-binding-and-event-apply" class="md-nav__link">
+    What is event binding and event apply?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-call-function" class="md-nav__link">
+    What is call() function?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-event-bubbeling" class="md-nav__link">
+    What is event-bubbeling?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-synthetic-events" class="md-nav__link">
+    What are synthetic events?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-reduce-work-in-js" class="md-nav__link">
+    How reduce() work in JS?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#react" class="md-nav__link">
+    React
+  </a>
+  
+    <nav class="md-nav" aria-label="React">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-is-constructor-in-react" class="md-nav__link">
+    What is constructor in react?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-super-in-react" class="md-nav__link">
+    What is Super in react?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-memo-in-react" class="md-nav__link">
+    What is memo in react?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-are-the-lifecycle-methods-of-react" class="md-nav__link">
+    What are the lifecycle methods of React?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-render-props" class="md-nav__link">
+    What is render props?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-action-synctax-in-redux" class="md-nav__link">
+    What is action synctax in redux?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-arrow-function-bind-this" class="md-nav__link">
+    How arrow function bind this?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#what-is-shadow-dom" class="md-nav__link">
+    What is shadow DOM?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#why-in-clearinterval-didnt-works-right-after-setinterval-in-useeffect" class="md-nav__link">
+    Why in clearInterval() didn't works right after setInterval() in useEffect?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-pass-state-in-context-api" class="md-nav__link">
+    How to pass state in context API?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-to-connect-graphql-to-react" class="md-nav__link">
+    How to connect GraphQL to react?
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="html-css/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Html css
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="r-failed/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    R failed
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="js-react">JS &amp; React</h1>
+<h2 id="javascript">JavaScript</h2>
+<h4 id="what-is-lexical-scoping">What is lexical scoping?</h4>
+<ul>
+<li>Lexical scope is the ability for a functions scope to access variable from the parent scope</li>
+<li>Inner function has a access of variables of its outer function</li>
+</ul>
+<h4 id="what-is-the-primitive-data-type">What is the primitive data type?</h4>
+<ul>
+<li>The predefined data types provided by JS</li>
+<li>The Primitive Data types in JavaScript include Number, String, Boolean, Undefined, Null and Symbol</li>
+</ul>
+<h4 id="what-are-non-primitive-data-types">What are Non-primitive data types?</h4>
+<ul>
+<li>Objects and Array</li>
+</ul>
+<h4 id="what-is-hoisting">What is hoisting?</h4>
+<ul>
+<li>It is default behavior of JS where all the variable and function declarations are moved on top</li>
+<li>Var variables are hoisted with a default value of undefined, which it accessible before declarations</li>
+<li>Let,const variables are hoisted without a default initialization</li>
+<li>Variable initializations are not hoisted, only variable declarations are hoisted</li>
+</ul>
+<h4 id="what-is-the-difference-between-varlet-and-const">What is the difference between var,let and const?</h4>
+<ul>
+<li><em>Var</em> has function scope and <em>let</em>, <em>const</em> has block scope</li>
+<li><em>Var</em> variables can be updated and re-declared within its scope</li>
+<li><em>Let</em> variable can be updated but not re-declared</li>
+<li><em>Const</em> variables can neither be updated or re-declared</li>
+</ul>
+<h4 id="what-is-implicit-type-coercion">What is implicit type Coercion?</h4>
+<ul>
+<li>Implicit type coercion in js is the automatic conversion of value from one data type to another</li>
+<li>it happens when the operator is used on different data type</li>
+<li><em>String coercion</em>: it is when + operator used, it always convert number type into string type<ul>
+<li>it is when - operator used, it always convert string type into number type</li>
+</ul>
+</li>
+<li><em>Boolean coercion</em>: it is when using logical,ternary operators,if statement and loop checks</li>
+<li><em>Logical coercion</em>: They always return one of the operands</li>
+<li><em>Equality coercion</em>: it is when using using <code>===</code> operator</li>
+</ul>
+<h4 id="is-js-a-statically-typed-or-a-dynamically-typed-language">Is JS a statically typed or a dynamically typed language?</h4>
+<ul>
+<li>Js is dynamically typed language</li>
+<li>In a dynamically type language, the type of the variable is check during run-time</li>
+<li>in statically type language, the type of variable is checked during compile-time</li>
+</ul>
+<h4 id="what-is-currying">What is currying?</h4>
+<ul>
+<li>It is a process that allows you to transform a function with multiple arguments into a sequence of nesting function</li>
+<li>It is an advanced technique to transform a function of arguments n, to n function of one or fewer arguments
+  <div class="highlight"><span class="filename">curry.js</span><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="nx">a</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">b</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">};</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">};</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nx">add</span><span class="p">(</span><span class="mf">3</span><span class="p">)(</span><span class="mf">4</span><span class="p">);</span>
+</code></pre></div></li>
+</ul>
+<h4 id="what-are-closures">What are Closures?</h4>
+<ul>
+<li>It is an ability of a functions to remember the variable and function that are declared in its outer scope</li>
+</ul>
+<h4 id="where-we-need-to-use-closure-function">Where we need to use closure function?</h4>
+<ul>
+<li>In event handlers, callback functions and more...</li>
+</ul>
+<h4 id="what-are-object-prototypes">What are object prototypes?</h4>
+<ul>
+<li>All JS objects inherit properties from prototype like date from Date, Array object from Array prototype</li>
+</ul>
+<h4 id="what-is-recursion">What is recursion?</h4>
+<ul>
+<li>It is a technique to iterate over an operation by having a function call itself repeatedly unit it arrives at a result</li>
+</ul>
+<h4 id="what-is-the-rest-parameter-and-spread-operator">What is the rest parameter and spread operator?</h4>
+<ul>
+<li><em>Rest parameter</em>: is used to take a n number of arguments and turns them into array</li>
+<li><em>Spread operator</em>: takes an array or an object and spreads it</li>
+</ul>
+<h4 id="what-are-promises">What are promises?</h4>
+<ul>
+<li>Promises are used to handle asynchronous operations in JS</li>
+<li>Promise object has four states-</li>
+<li><em>Pending</em>: initial state</li>
+<li><em>Fulfilled</em>: async operation is completed</li>
+<li><em>Rejected</em>: async operation is failed</li>
+<li><em>Settled</em>: the promise has been either rejected or fulfilled</li>
+<li>Promise constructor which takes in a callback function with two parameter resolve and reject</li>
+</ul>
+<h4 id="what-are-generator-functions">What are generator functions?</h4>
+<ul>
+<li>There are a special class of functions, introduced in the ES6 version</li>
+<li>Generator function are declared with <code>function*</code> keyword instead of normal function</li>
+<li>In Generate function, when called, they do not execute the code instead, they return a generator object</li>
+<li>that generator object handles the execution</li>
+<li>the object consists of method called next()</li>
+<li>next() method executes the code until the nearest <code>yield</code> statement</li>
+<li>next() method returns the <code>yield</code> value : {value: 'some-value', done: true}</li>
+<li><code>value</code> property represents the yielded value and <code>done</code> tells, if function code is finished or not</li>
+</ul>
+<h4 id="what-is-object-destructuring">What is Object Destructuring?</h4>
+<ul>
+<li>It is a new way to extract elements from an object of an array</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;yo&quot;</span><span class="w"> </span><span class="p">};</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">userId</span><span class="o">:</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">userName</span><span class="o">:</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj</span><span class="p">;</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">id</span><span class="p">,</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">obj</span><span class="p">;</span><span class="w"> </span><span class="c1">// if we want same name as the property</span>
+</code></pre></div>
+<h4 id="what-is-event-binding-and-event-apply">What is event binding and event apply?</h4>
+<ul>
+<li><em>Event binding</em> refers to telling the browser that a particular
+  function should be called whenever some 'event' occurs</li>
+<li><em>Event apply</em> used to call a function in a different object with the given <em>this</em> value,
+  and the arguments are passed in the form of an array</li>
+</ul>
+<h4 id="what-is-call-function">What is call() function?</h4>
+<ul>
+<li>With the <em>call()</em> method, we can write a method that can be used on different object</li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kd">const</span><span class="w"> </span><span class="nx">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nx">fullName</span><span class="o">:</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">firstName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">lastName</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="p">};</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="kd">const</span><span class="w"> </span><span class="nx">person1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nx">firstName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;John&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nx">lastName</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;Doe&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="p">};</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="c1">// This will return &quot;John Doe&quot;:</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="nx">person</span><span class="p">.</span><span class="nx">fullName</span><span class="p">.</span><span class="nx">call</span><span class="p">(</span><span class="nx">person1</span><span class="p">);</span>
+</code></pre></div>
+<h4 id="what-is-event-bubbeling">What is event-bubbeling?</h4>
+<ul>
+<li>It is a method of <code>event propagation</code> in the HTML DOM API</li>
+<li>When event is in element inside another element, and both elements have registered to handle to that event</li>
+<li>It is process that starts with the element that triggered the event
+  and then bubbles up to containing elements in hierarchy</li>
+</ul>
+<h4 id="what-are-synthetic-events">What are synthetic events?</h4>
+<ul>
+<li>Thery are cross-browser around the browser's native events like stopPropagation() and preventDefault()</li>
+</ul>
+<h4 id="how-reduce-work-in-js">How reduce() work in JS?</h4>
+<ul>
+<li>Reduce an array to a single value</li>
+<li>Does not change the original array</li>
+</ul>
+<h2 id="react">React</h2>
+<h4 id="what-is-constructor-in-react">What is constructor in react?</h4>
+<ul>
+<li>It is a method used to initialize an object's state in class</li>
+<li><em>Constructor</em> in a react component is called before the component is mounted</li>
+</ul>
+<h4 id="what-is-super-in-react">What is Super in react?</h4>
+<ul>
+<li><em>Super():</em> it is used to call the constructor of its parent class</li>
+</ul>
+<h4 id="what-is-memo-in-react">What is memo in react?</h4>
+<ul>
+<li>React memo is a higher-oder component that wraps around a component to memoize the rendered output
+  and avoid unnecessary renderings</li>
+<li>Using memo will cause React to skip rendering a component if its props haven't changed</li>
+</ul>
+<h4 id="what-are-the-lifecycle-methods-of-react">What are the lifecycle methods of React?</h4>
+<ul>
+<li>After react v 16.3+</li>
+<li><code>getDrivedStateFromProps</code>: invoked before render() and is invoked on every render</li>
+<li><code>componentDidMount</code>: executed after first rendering</li>
+<li><code>shoudComponentUpdate</code>: determines if the component will be update or not, by default it returns true</li>
+<li><code>getSnapshotBeforeUpdate</code>: executed right before rendered output is committed to DOM</li>
+<li><code>componentDidUpdate</code>: mostly it used to update the DOM in response to prop or state changes</li>
+<li><code>componentWillUnmount</code>: it will be used to cancel any outgoing process</li>
+</ul>
+<h4 id="what-is-render-props">What is render props?</h4>
+<ul>
+<li>Instead of implementing its own render logic, a child component calls render props as functions.</li>
+</ul>
+<h4 id="what-is-action-synctax-in-redux">What is action synctax in redux?</h4>
+<ul>
+<li>Actions are plain JS object that must have a type attribute
+  to indicate the type of action performed</li>
+<li>{type: GET_DATA, payload: {}}</li>
+</ul>
+<h4 id="how-arrow-function-bind-this">How arrow function bind <code>this</code>?</h4>
+<ul>
+<li>Arrow function do not bind their own <code>this</code>, instead they inherit from parent scope or lexical scope</li>
+<li>In regular function the this keyword represented the object that called the function
+  which could be the window, the document, a button or whatever</li>
+</ul>
+<h4 id="what-is-shadow-dom">What is shadow DOM?</h4>
+<ul>
+<li>Lets us create custom component</li>
+<li>It creates scoped DOM Tree inside our element</li>
+</ul>
+<h4 id="why-in-clearinterval-didnt-works-right-after-setinterval-in-useeffect">Why in clearInterval() didn't works right after setInterval() in useEffect?</h4>
+<ul>
+<li>To handle this we can use useEffect's cleanup function
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">return</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nx">clearInterval</span><span class="p">(</span><span class="nx">intervalId</span><span class="p">);</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="p">};</span>
+</code></pre></div></li>
+</ul>
+<h4 id="how-to-pass-state-in-context-api">How to pass state in context API?</h4>
+<h4 id="how-to-connect-graphql-to-react">How to connect GraphQL to react?</h4>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      &copy; 2023 <a href="https://github.com/jkhabra"  target="_blank" rel="noopener">Jatinder khabra</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/jkhabra" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://www.linkedin.com/in/jatinder-khabra-39070310a" target="_blank" rel="noopener" title="www.linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": ".", "features": ["navigation.tabs", "navigation.sections", "toc.integrate", "navigation.top", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy"], "search": "assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+    
+  </body>
+</html>
