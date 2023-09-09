@@ -2,8 +2,6 @@
 #### Write code to print 1-100 where every multiple of 3 should print "FIZZ",
   every multiple of 5 should print "BUZZ" and every multiple of 3 and 5 as "FIZZBUZZ"
   Ex: 1 2 FIZZ 4 BUZZ
-
-### Trantor interview
 #### What is REST APIs?
 - Representational state transfer is software architecture that impose condition on how API should work
 - REST API is way of accessing web service in a simple and flexible way without having nay processing
@@ -13,11 +11,8 @@
 #### What is Patch method?
 - It is used to modify capabilities
 - PATCH req only needs to contain the changes to resource, not the complete resource
-#### How react renders?
-#### What is difference between library and framework
 #### How to make a custom hooks?
   - event loop, custom hooks
-
 #### What this code do?
 const obj = { value: 42 };
 
@@ -51,6 +46,4 @@ const result = getValue.call(obj);
 - A `framework` can reduce complexity for developer
 - A `framework` can abstract away logic, behavior and even architectural patterns
 - A `library` can help with complexity, but typically focuses on code reuse
-
-
 #### what are web APIs with example?

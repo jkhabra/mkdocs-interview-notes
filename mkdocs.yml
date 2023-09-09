@@ -27,6 +27,8 @@ theme:
       accent: lime
 
 plugins:
+  - search
+  - localsearch
   - social
 
 extra:
